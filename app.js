@@ -9,6 +9,23 @@ app.get('/req', (req, res) => {
     res.send('Yo!')
 })
 
+app.get('/meunome', (req, res) => {
+  res.send('Luiz Paulo Rodrigues da Silva Santos')
+})
+
+app.get('/tico', (req, res) => {
+  res.send('Teco')
+})
+
+app.get('/pokemons', (req, res) =>{
+  res.json('Os primeiros pokemons que Ash capturou foram: Pikachu, Caterpie, Pidgeotto, Metapod, Butterfree, Bulbasaur, Charmander, Squirtle, Krabby, Raticate e Haunter')
+})
+
+app.post('/series', (req, res) =>{
+  var series = req.body.series
+  res.json(series)
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
