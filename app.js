@@ -22,7 +22,7 @@ app.get('/pokemons', (req, res) =>{
 })
 
 app.post('/series', (req, res) =>{
-  var series = req.body.series
+  var series = req.body
   res.json(series)
 })
 
