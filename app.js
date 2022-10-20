@@ -2,29 +2,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.json())
+app.use(express.urlencoded({extended: true}));
+
 app.get("/", (req, res) => res.type('html').send(html));
-
-app.get('/req', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
-})
-
-app.get('/meunome', (req, res) => {
-  res.send('Luiz Paulo Rodrigues da Silva Santos')
-})
-
-app.get('/tico', (req, res) => {
-  res.send('Teco')
-})
-
-app.get('/pokemons', (req, res) =>{
-  res.json('Os primeiros pokemons que Ash capturou foram: Pikachu, Caterpie, Pidgeotto, Metapod, Butterfree, Bulbasaur, Charmander, Squirtle, Krabby, Raticate e Haunter')
-})
-
-app.post('/series', (req, res) =>{
-  var series = req.body
-  res.json(series)
-})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
