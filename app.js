@@ -12,6 +12,27 @@ app.get('/req', (req, res) => {
     res.send('Yo!')
 })
 
+//Atv 01
+app.get('/meuNome', (req, res) => {
+  res.send('Meu chamo Juliana Maronez Rosa');
+});
+
+//Atv 02
+app.get('/tico', (req, res) => {
+  res.send('teco');
+});
+
+//Atv 03
+app.get('/pokemons', (req, res) =>{
+  const Pokemons = ["Pikachu", "Caterpie", "Pidgeotto","Bulbasaur", "Charmander", "Squirtle", "Krabby", "Raticate", "Primeape", "Muk", "Tauros", "Mr. Mime"];
+  res.json(Pokemons);
+});
+
+//Atv 04
+app.get('/series', (req, res) => {
+  const series = ["How i Met Your Mother", "The Good Doctor", "Bom dia, Verônica"];
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
