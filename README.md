@@ -4,6 +4,8 @@ This is the [Express](https://expressjs.com) [Hello world](https://expressjs.com
 
 The app in this repo is deployed at Cyclic
 
+**Note:** Automatic deployment to Vercel is disabled for this repository.
+
 ## Deployment
 
 Follow the steps below:
