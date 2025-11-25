@@ -30,3 +30,24 @@ app.get("/pokemons", (req, res) => {
 
   res.json(pokemons);
 });
+
+// desafio 4
+
+app.post("/series", (req, res) => {
+  const { series } = req.body;
+
+  if (!series || !Array.isArray(series) || series.length < 3) {
+    return res.status(400).json({
+      erro: "Envie um JSON contendo um array com pelo menos 3 séries, ex: { \"series\": [\"A\", \"B\", \"C\"] }"
+    });
+  }
+
+  res.json({
+    mensagem: "Suas séries favoritas:",
+    favoritas: series.slice(0, 3)
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
+});
