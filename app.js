@@ -12,3 +12,21 @@ app.get("/meunome", (req, res) => {
 app.get("/eco", (req, res) => {
   res.send("eco");
 });
+
+// desafio 3
+app.get("/pokemons", (req, res) => {
+  const pokemons = [
+    "Pikachu",
+    "Caterpie",
+    "Pidgeotto",
+    "Bulbasaur",
+    "Charmander",
+    "Squirtle",
+    "Krabby",
+    "Primeape",
+    "Muk",
+    "Tauros"
+  ];
+
+  res.json(pokemons);
+});
